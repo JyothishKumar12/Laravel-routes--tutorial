@@ -29,3 +29,7 @@ Route::get('post/{post_id}/comment/{comment_id}',function($post_id,$comment_id){
 
     return "Post id: " . $post_id ."Comment id:" .$comment_id ; 
 });
+
+Route::get('student/{name?}',function($name=null){
+    return "Hello".$name;
+});
