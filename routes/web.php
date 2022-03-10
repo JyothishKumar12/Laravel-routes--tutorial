@@ -24,3 +24,8 @@ Route::get('/about',function(){
 Route::get('user/{u_id}',function($id){
     return($id);
 });
+
+Route::get('post/{post_id}/comment/{comment_id}',function($post_id,$comment_id){
+
+    return "Post id: " . $post_id ."Comment id:" .$comment_id ; 
+});
