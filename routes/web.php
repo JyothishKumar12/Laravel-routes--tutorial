@@ -33,3 +33,11 @@ Route::get('post/{post_id}/comment/{comment_id}',function($post_id,$comment_id){
 Route::get('student/{name?}',function($name=null){
     return "Hello".$name;
 });
+
+Route::redirect('about/','student/{name?}');
+
+Route::fallback(function(){
+
+    return "Page is not found";
+
+});
